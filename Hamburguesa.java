@@ -1,11 +1,32 @@
 public abstract class Hamburguesa {
-    void preparar() {
+    String id;
+    String nombre;
+    String descripcion;
+    double precio;
+    boolean tieneQueso;
+    boolean esVegetariano;
+
+    Hamburguesa(String id,
+            String nombre,
+            String descripcion,
+            double precio,
+            boolean tieneQueso,
+            boolean esVegetariano) {
+        this.id = id;
+        this.nombre = nombre;
+        this.descripcion = descripcion;
+        this.precio = precio;
+        this.tieneQueso = tieneQueso;
+        this.esVegetariano = esVegetariano;
+    }
+
+    void procesoCoccion() {
         ponerPan();
         ponerMayonesa();
         ponerMostaza();
         prepararCarne();
         ponerCarne();
-        if (llevaQueso()) {
+        if (clienteQuiereQueso()) {
             ponerQueso();
         }
         ponerVegetales();
@@ -41,11 +62,36 @@ public abstract class Hamburguesa {
         System.out.println("Ponemos poca catsup");
     }
 
+    // Hook
+    boolean clienteQuiereQueso() {
+        return tieneQueso;
+    }
+
     // vegetariana o normal
     abstract void prepararCarne();
 
-    // Hook
-    boolean llevaQueso() {
-        return true;
+    public String getId() {
+        return id;
     }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public double getPrecio() {
+        return precio;
+    }
+
+    public boolean isTieneQueso() {
+        return tieneQueso;
+    }
+
+    public boolean isEsVegetariano() {
+        return esVegetariano;
+    }
+
 }
