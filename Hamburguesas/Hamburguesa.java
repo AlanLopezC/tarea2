@@ -1,3 +1,5 @@
+package Hamburguesas;
+
 public abstract class Hamburguesa {
     String id;
     String nombre;
@@ -6,7 +8,7 @@ public abstract class Hamburguesa {
     boolean tieneQueso;
     boolean esVegetariano;
 
-    Hamburguesa(String id,
+    public Hamburguesa(String id,
             String nombre,
             String descripcion,
             double precio,
@@ -68,7 +70,7 @@ public abstract class Hamburguesa {
     }
 
     // vegetariana o normal
-    abstract void prepararCarne();
+    protected abstract void prepararCarne();
 
     public String getId() {
         return id;

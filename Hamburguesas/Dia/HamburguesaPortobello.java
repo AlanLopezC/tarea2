@@ -1,3 +1,5 @@
+package Hamburguesas.Dia;
+
 public class HamburguesaPortobello extends HamburguesaDia {
 
     HamburguesaPortobello(String id, String nombre, String descripcion, double precio, boolean tieneQueso,
@@ -6,7 +8,7 @@ public class HamburguesaPortobello extends HamburguesaDia {
     }
 
     @Override
-    void prepararCarne() {
+    protected void prepararCarne() {
         System.out.println("Preparamos un hongo Portobello");
     }
 

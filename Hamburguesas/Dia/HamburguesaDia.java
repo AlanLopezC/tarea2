@@ -1,3 +1,7 @@
+package Hamburguesas.Dia;
+
+import Hamburguesas.Hamburguesa;
+
 public abstract class HamburguesaDia extends Hamburguesa {
 
     HamburguesaDia(String id, String nombre, String descripcion, double precio, boolean tieneQueso,

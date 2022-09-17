@@ -1,28 +1,33 @@
+package Menus;
+
 import java.util.Iterator;
+
+import Hamburguesas.Hamburguesa;
+
 import java.util.ArrayList;
 
 public class MenuDia extends Menu {
 
     private ArrayList<Hamburguesa> hamburguesas;
 
-    public MenuDia(){
+    public MenuDia() {
         super("DIA");
         hamburguesas = new ArrayList<>();
     }
 
-    public void agregarHamburguesa(Hamburguesa hamburguesa){
-        if(hamburguesas.size() == 3){
-            throw new CantidadHamburguesas(); 
+    public void agregarHamburguesa(Hamburguesa hamburguesa) {
+        if (hamburguesas.size() == 3) {
+            throw new CantidadHamburguesas();
         }
         hamburguesas.add(hamburguesa);
     }
-    
-    public Hamburguesa eliminarHamburguesa(String id){
+
+    public Hamburguesa eliminarHamburguesa(String id) {
 
         Iterator<Hamburguesa> hamburguesasIterador = hamburguesas.iterator();
-        while(hamburguesasIterador.hasNext()){
+        while (hamburguesasIterador.hasNext()) {
             Hamburguesa hamburguesa = hamburguesasIterador.next();
-            if(hamburguesa.getId.equals(id)){
+            if (hamburguesa.getId().equals(id)) {
                 hamburguesasIterador.remove();
                 return hamburguesa;
             }
@@ -38,7 +43,7 @@ public class MenuDia extends Menu {
 
             @Override
             public boolean hasNext() {
-                if(position >= hamburguesas.size()){
+                if (position >= hamburguesas.size()) {
                     return false;
                 }
                 return true;
@@ -49,8 +54,8 @@ public class MenuDia extends Menu {
                 Hamburguesa hamburguesa = hamburguesas.get(position);
                 position += 1;
                 return hamburguesa;
-            }  
+            }
         };
     }
-    
+
 }

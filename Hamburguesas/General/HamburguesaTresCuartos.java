@@ -1,3 +1,5 @@
+package Hamburguesas.General;
+
 public class HamburguesaTresCuartos extends HamburguesaGeneral {
 
     HamburguesaTresCuartos(String id, String nombre, String descripcion, double precio, boolean tieneQueso,
@@ -6,7 +8,7 @@ public class HamburguesaTresCuartos extends HamburguesaGeneral {
     }
 
     @Override
-    void prepararCarne() {
+    protected void prepararCarne() {
         System.out.println("Preparamos una carne tres cuartos");
     }
 

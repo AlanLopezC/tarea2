@@ -1,23 +1,27 @@
+package Menus;
+
 import java.util.Iterator;
 
-public class MenuGeneral extends Menu{
+import Hamburguesas.Hamburguesa;
+
+public class MenuGeneral extends Menu {
 
     private Hamburguesa[] hamburguesas;
     private int disponibilidad;
 
-    public MenuGeneral(){
-        super("GENERAL"); 
+    public MenuGeneral() {
+        super("GENERAL");
         hamburguesas = new Hamburguesa[3];
-        disponibilidad = 0;  
+        disponibilidad = 0;
     }
 
-    public void agregarHamburguesa(Hamburguesa hamburguesa){
-        if (disponibilidad == hamburguesas.length){
+    public void agregarHamburguesa(Hamburguesa hamburguesa) {
+        if (disponibilidad == hamburguesas.length) {
             throw new CantidadHamburguesas();
         }
 
-        for(int i = 0; i < hamburguesas.length; i++){
-            if(hamburguesas[i] == null){
+        for (int i = 0; i < hamburguesas.length; i++) {
+            if (hamburguesas[i] == null) {
                 hamburguesas[i] = hamburguesa;
                 break;
             }
@@ -32,7 +36,7 @@ public class MenuGeneral extends Menu{
 
             @Override
             public boolean hasNext() {
-                if (position >= hamburguesas.length || hamburguesas[position] == null){
+                if (position >= hamburguesas.length || hamburguesas[position] == null) {
                     return false;
                 }
                 return true;
@@ -43,7 +47,7 @@ public class MenuGeneral extends Menu{
                 Hamburguesa hamburguesa = hamburguesas[position];
                 position += 1;
                 return hamburguesa;
-            }  
+            }
         };
     }
 }

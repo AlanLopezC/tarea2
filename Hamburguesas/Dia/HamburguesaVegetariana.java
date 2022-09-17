@@ -1,3 +1,5 @@
+package Hamburguesas.Dia;
+
 public class HamburguesaVegetariana extends HamburguesaDia {
 
     HamburguesaVegetariana(String id, String nombre, String descripcion, double precio, boolean tieneQueso,
@@ -6,7 +8,7 @@ public class HamburguesaVegetariana extends HamburguesaDia {
     }
 
     @Override
-    void prepararCarne() {
+    protected void prepararCarne() {
         System.out.println("Preparamos una carne vegetariana");
     }
 
