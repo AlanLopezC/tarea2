@@ -22,6 +22,9 @@ public abstract class Hamburguesa {
         this.esVegetariano = esVegetariano;
     }
 
+    /**
+     * Implementa el proceso de coccion de la hamburguesa.
+     */
     void procesoCoccion() {
         ponerPan();
         ponerMayonesa();
@@ -36,40 +39,65 @@ public abstract class Hamburguesa {
         ponerPan();
     }
 
+    /**
+     * Imprime mensaje de que se puso pan.
+     */
     void ponerPan() {
         System.out.println("Ponemos un pan");
     }
 
+    /**
+     * Imprime mensaje de que se puso mayonesa.
+     */
     void ponerMayonesa() {
         System.out.println("Untamos la mayonesa");
     }
 
+    /**
+     * Imprime mensaje de que se puso mostaza.
+     */
     void ponerMostaza() {
         System.out.println("Untamos la mostaza");
     }
 
+    /**
+     * Imprime mensaje de que se puso carne.
+     */
     void ponerCarne() {
         System.out.println("Ponemos la carne");
     }
 
+    /**
+     * Imprime mensaje de que se puso queso.
+     */
     void ponerQueso() {
         System.out.println("Ponemos dos rebanadas de queso");
     }
 
+    /**
+     * Imprime mensaje de que se puso vegetales.
+     */
     void ponerVegetales() {
         System.out.println("Ponemos lechuga, tomate y cebolla");
     }
 
+    /**
+     * Imprime mensaje de que se puso catsup.
+     */
     void ponerCatsup() {
         System.out.println("Ponemos poca catsup");
     }
 
-    // Hook
+    /**
+     * Determina si la hamburguesa lleva queso.
+     */
     boolean clienteQuiereQueso() {
         return tieneQueso;
     }
 
-    // vegetariana o normal
+    /**
+     * Especifica la forma especial de preparar la carne.
+     */
     protected abstract void prepararCarne();
 
     public String getId() {
