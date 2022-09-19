@@ -20,21 +20,7 @@ public class MenuEspecial extends Menu {
 
     @Override
     Iterator<Hamburguesa> iterator() {
-        return new Iterator<Hamburguesa>() {
-
-            Iterator<String> keyIterator = hamburguesas.keySet().iterator();
-
-            @Override
-            public boolean hasNext() {
-                return keyIterator.hasNext();
-            }
-
-            @Override
-            public Hamburguesa next() {
-                String key = keyIterator.next();
-                return hamburguesas.get(key);
-            }
-        } ;
+        return new MenuEspecialIterator(hamburguesas);
     }
 
 }

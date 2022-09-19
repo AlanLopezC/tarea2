@@ -22,7 +22,7 @@ public class MenuDia extends Menu {
         Iterator<Hamburguesa> hamburguesasIterador = hamburguesas.iterator();
         while(hamburguesasIterador.hasNext()){
             Hamburguesa hamburguesa = hamburguesasIterador.next();
-            if(hamburguesa.getId.equals(id)){
+            if(hamburguesa.getId().equals(id)){
                 hamburguesasIterador.remove();
                 return hamburguesa;
             }
@@ -32,25 +32,7 @@ public class MenuDia extends Menu {
 
     @Override
     public Iterator<Hamburguesa> iterator() {
-        return new Iterator<Hamburguesa>() {
-
-            private int position = 0;
-
-            @Override
-            public boolean hasNext() {
-                if(position >= hamburguesas.size()){
-                    return false;
-                }
-                return true;
-            }
-
-            @Override
-            public Hamburguesa next() {
-                Hamburguesa hamburguesa = hamburguesas.get(position);
-                position += 1;
-                return hamburguesa;
-            }  
-        };
+        return new MenuDiaIterator(hamburguesas);
     }
     
 }
