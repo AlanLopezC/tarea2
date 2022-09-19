@@ -17,6 +17,10 @@ public class MenuDia extends Menu {
         hamburguesas.add(hamburguesa);
     }
     
+    /**
+     * Método para elminar una Hamburguesa del Menu. 
+     * @param String - Id de la Hamburguesa. 
+     */
     public Hamburguesa eliminarHamburguesa(String id){
 
         Iterator<Hamburguesa> hamburguesasIterador = hamburguesas.iterator();

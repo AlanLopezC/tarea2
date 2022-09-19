@@ -6,14 +6,29 @@ public abstract class Menu{
 
     private String nombre;
 
+    /**
+     * Constructor de la clase Menu
+     * @param String - Nombre del Menu.
+     */
     public Menu(String nombreIn){
         nombre = nombreIn;
     }
 
+    /**
+     * Crea un objeto de la clase MenuGeneralIterdor
+     * @return Iterator<Hamburguesa> - El Iterador.
+     */
     abstract Iterator<Hamburguesa> iterator();
 
+    /**
+     * Método para agregar una hamburguesa al Menu. 
+     * @param Hamburguesa - Hamburguesa a agregar. 
+     */
     abstract void agregarHamburguesa(Hamburguesa hamburguesa);
 
+    /**
+     * Método para mostrar el Menu.
+     */
     String mostrarMenu() {
         
         Iterator<Hamburguesa> iteradorHamburgesas = this.iterator();
@@ -45,6 +60,10 @@ public abstract class Menu{
         return menu;
     }
 
+    /**
+     * Método para obtener hamburguesas. 
+     * @param String - Id de la Hamburguesa.
+     */
     Hamburguesa obtenerHamburguesa(String id){
         Iterator<Hamburguesa> iteradorHamburgesas = this.iterator(); 
         while(iteradorHamburgesas.hasNext()){
@@ -56,10 +75,18 @@ public abstract class Menu{
         return null;
     };
 
+    /**
+     * Método para formar la Fila de la tabla utilizada para la representación del Menu. 
+     * Se remplaza el caracter '|' con el símbolo Unicode Character '\u2502'
+     */
     static String formatoFila(String fila){
         return fila.replace('|', '\u2502');
     }
 
+    /**
+     * Método para formar la columna de la tabla utilizada para la representación del Menu.  
+     * Se remplaza cada letra con un símbolo Unicode Character para representar la tabla. 
+     */
     static String formatoColumna(String columna){
         return columna.replace('a', '\u250c')
                 .replace('b', '\u252c')
