@@ -14,7 +14,7 @@ public class MenuEspecialIterator implements Iterator<Hamburguesa> {
 
     public MenuEspecialIterator(Hashtable<String, Hamburguesa> hamburguesasIn) {
         hamburguesas = hamburguesasIn;
-        hamburguesasId = hamburguesas.keySet().toArray(hamburguesasId);
+        hamburguesasId = hamburguesas.keySet().toArray(new String[3]);
     }
 
     @Override

@@ -147,6 +147,13 @@ public class Robot {
     proximidadDestino += proximidad;
   }
 
+  /**
+   * Método para poner el atributo ordenRecibida como true.
+   */
+  public void setOrdenRecibida(){
+    ordenRecibida = true;
+  }
+
   /*
    * Método que modifica el valor del atributo llegarDestino.
    * 

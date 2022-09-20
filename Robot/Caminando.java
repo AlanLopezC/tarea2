@@ -46,35 +46,46 @@ public class Caminando implements EstadoRobot {
 
       bender.resetProximidadDestino();
       bender.asignarNuevoEstado(bender.getAtendiendo());
+
+      // Aquí lo agrege 
+      bender.setOrdenRecibida();
+
+      System.out.println("En esta parte ya cambio al estado atendido -------------");
     } else {
       System.out.println("Aun no llego a tu mesa,espera por favor");
     }
   }
 
   private void imprimirMenus(ArrayList<Menu> menus) {
-    for (Menu menu : menus) {
-      System.out.println(menu.mostrarMenu());
-      System.out.println("********************************");
-    }
+    while(true){
+      try {
+        for (Menu menu : menus) {
+          System.out.println(menu.mostrarMenu());
+          System.out.println("********************************");
+        }
     System.out.println("Selecciona el numero de menu que deseas: ");
     final Scanner sc = new Scanner(System.in);
-
-    try {
       String opcionUsuario = sc.nextLine();
       int menuSeleccionadoIndex = Integer.parseInt(opcionUsuario);
 
       Menu menuSeleccionado = menus.get(menuSeleccionadoIndex - 1);
-      menuSeleccionado.mostrarMenu();
+      System.out.println(menuSeleccionado.mostrarMenu());
+
+      System.out.println("Introduzca el ID: ");
 
       String opcionUsuario2 = sc.nextLine();
+      
       Hamburguesa hamburguesaSeleccionada = menuSeleccionado.obtenerHamburguesa(opcionUsuario2);
+      if(hamburguesaSeleccionada == null){
+        continue;
+      }
       bender.setHamburguesaSeleccionada(hamburguesaSeleccionada);
+      break;
 
     } catch (NumberFormatException ex) {
-      System.out.println(ex);
+      System.out.println("Vuelve a intentarlo.");
     }
-
-    sc.close();
+    }
   }
 
   /**

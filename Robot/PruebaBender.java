@@ -3,6 +3,8 @@ import java.util.Scanner;
 
 import Menus.Menu;
 import Menus.MenuDia;
+import Menus.MenuEspecial;
+import Menus.MenuGeneral;
 
 public class PruebaBender {
 	public static void main(String[] args) {
@@ -10,6 +12,8 @@ public class PruebaBender {
 		Scanner sc = new Scanner(System.in);
 		ArrayList<Menu> menus = new ArrayList<Menu>();
 		menus.add(new MenuDia());
+		menus.add(new MenuGeneral());
+		menus.add(new MenuEspecial());
 
 		int opcion;
 		System.out.println("***BIENVENIDO A LA CONSOLA DE Bender.***"
@@ -27,6 +31,7 @@ public class PruebaBender {
 				try {
 					String opcionUsuario = sc.nextLine();
 					opcion = Integer.parseInt(opcionUsuario);
+					// sc.close();
 					break;
 				} catch (NumberFormatException ex) {
 					System.out.println("Por favor elige la opcion VALIDA "
@@ -67,6 +72,5 @@ public class PruebaBender {
 			}
 
 		} while (opcion != 0);
-		sc.close();
 	}
 }
