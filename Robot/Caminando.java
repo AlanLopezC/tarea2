@@ -38,8 +38,10 @@ public class Caminando implements EstadoRobot {
   }
 
   /**
-   * Metodo que permite al botot cambiar del estado Caminando al estado
+   * Metodo que permite al robot cambiar del estado Caminando al estado
    * Atendiedno, en caso de que sea permitido.
+   * 
+   * @param menus Menus a mostrar.
    **/
   public void atender(ArrayList<Menu> menus) {
     if (bender.getLlegarDestino()) {
@@ -49,7 +51,6 @@ public class Caminando implements EstadoRobot {
       bender.resetProximidadDestino();
       bender.asignarNuevoEstado(bender.getAtendiendo());
 
-      // Aquí lo agrege
       bender.setOrdenRecibida();
 
       System.out.println("En esta parte ya cambio al estado atendido -------------");
@@ -58,6 +59,11 @@ public class Caminando implements EstadoRobot {
     }
   }
 
+  /**
+   * Metodo que permite mostrar los menus al usuario y tomar la orden.
+   * 
+   * @param menus Menus a mostrar.
+   **/
   private void imprimirMenus(ArrayList<Menu> menus) {
     while (true) {
       try {
