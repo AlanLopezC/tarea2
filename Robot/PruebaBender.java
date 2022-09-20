@@ -1,9 +1,16 @@
+import java.util.ArrayList;
 import java.util.Scanner;
+
+import Menus.Menu;
+import Menus.MenuDia;
 
 public class PruebaBender {
 	public static void main(String[] args) {
 		Robot bender = new Robot();
 		Scanner sc = new Scanner(System.in);
+		ArrayList<Menu> menus = new ArrayList<Menu>();
+		menus.add(new MenuDia());
+
 		int opcion;
 		System.out.println("***BIENVENIDO A LA CONSOLA DE Bender.***"
 				+ "\nPor favor elige la opcion que deseas ejecutar.");
@@ -16,9 +23,6 @@ public class PruebaBender {
 							"4.- suspender.\n" +
 							"0.- Terminar simulacion.\n");
 
-			if (bender.getEstadoActual() == bender.getAtendiendo()) {
-				System.out.println("aqui deberia imprimirse el menu, no estoy seguro");
-			}
 			while (true) {
 				try {
 					String opcionUsuario = sc.nextLine();
@@ -42,7 +46,7 @@ public class PruebaBender {
 					break;
 
 				case 2:
-					bender.atender();
+					bender.atender(menus);
 					break;
 
 				case 3:

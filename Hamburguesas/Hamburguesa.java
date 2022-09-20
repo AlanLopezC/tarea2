@@ -25,7 +25,7 @@ public abstract class Hamburguesa {
     /**
      * Implementa el proceso de coccion de la hamburguesa.
      */
-    void procesoCoccion() {
+    public void procesoCoccion() {
         ponerPan();
         ponerMayonesa();
         ponerMostaza();

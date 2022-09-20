@@ -35,7 +35,7 @@ public abstract class Menu {
     /**
      * Método para mostrar el Menu.
      */
-    String mostrarMenu() {
+    public String mostrarMenu() {
 
         Iterator<Hamburguesa> iteradorHamburgesas = this.iterator();
         NumberFormat numberFormat = NumberFormat.getCurrencyInstance();
@@ -80,7 +80,7 @@ public abstract class Menu {
      * 
      * @param String - Id de la Hamburguesa.
      */
-    Hamburguesa obtenerHamburguesa(String id) {
+    public Hamburguesa obtenerHamburguesa(String id) {
         Iterator<Hamburguesa> iteradorHamburgesas = this.iterator();
         while (iteradorHamburgesas.hasNext()) {
             Hamburguesa hamburguesa = iteradorHamburgesas.next();
