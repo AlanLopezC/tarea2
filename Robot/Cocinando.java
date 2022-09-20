@@ -1,3 +1,4 @@
+package Robot;
 import java.util.ArrayList;
 
 import Menus.Menu;
@@ -13,7 +14,7 @@ public class Cocinando implements EstadoRobot {
 
   /**
    * Constructor de la clase Cocinando
-   * 
+   *
    * @param bender Robot que tendrá el estado cocinando.
    **/
   public Cocinando(Robot bender) {

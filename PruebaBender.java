@@ -3,6 +3,9 @@ import java.util.Scanner;
 
 import Menus.Menu;
 import Menus.MenuDia;
+import Menus.MenuGeneral;
+import Menus.MenuEspecial;
+import Robot.*;
 
 public class PruebaBender {
 	public static void main(String[] args) {
@@ -10,6 +13,9 @@ public class PruebaBender {
 		Scanner sc = new Scanner(System.in);
 		ArrayList<Menu> menus = new ArrayList<Menu>();
 		menus.add(new MenuDia());
+		menus.add(new MenuGeneral());
+		menus.add(new MenuEspecial());
+
 
 		int opcion;
 		System.out.println("***BIENVENIDO A LA CONSOLA DE Bender.***"

@@ -9,12 +9,16 @@ import java.util.Hashtable;
 public class MenuEspecialIterator implements Iterator<Hamburguesa> {
 
     private Hashtable<String, Hamburguesa> hamburguesas;
-    private String[] hamburguesasId;
+    private String[] hamburguesasId = new String[3];
     private int position = 0;
 
     public MenuEspecialIterator(Hashtable<String, Hamburguesa> hamburguesasIn) {
+        System.out.println(hamburguesasIn);
         hamburguesas = hamburguesasIn;
+
         hamburguesasId = hamburguesas.keySet().toArray(hamburguesasId);
+
+
     }
 
     @Override

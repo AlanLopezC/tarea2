@@ -1,3 +1,4 @@
+package Robot;
 import java.util.ArrayList;
 
 import Hamburguesas.Hamburguesa;
@@ -83,7 +84,7 @@ public class Robot {
    * Método que recibe la orden del cliente, por lo que cambia el valor del
    * atributo
    * orden recibida.
-   * 
+   *
    * @param ordenMenu id del platillo ordenado.
    */
   public void ingresarOrden(int ordenMenu) {
@@ -93,7 +94,7 @@ public class Robot {
 
   /*
    * Método que devuelve el valor del atributo ordenRecivida.
-   * 
+   *
    * @return boolean true si ya se recibió la orden, false en caso contrario.
    */
   public boolean getOrdenRecibida() {
@@ -102,7 +103,7 @@ public class Robot {
 
   /*
    * Método que devuelve el valor del atributo ordenEntregada.
-   * 
+   *
    * @return boolean true si ya se entregó la orden, false en caso contrario.
    */
   public boolean getOrdenEntregada() {
@@ -111,7 +112,7 @@ public class Robot {
 
   /*
    * Método que devuelve el valor del atributo llegarDestino.
-   * 
+   *
    * @return boolean true si ya llegó a su destino, false en caso contrario.
    */
   public boolean getLlegarDestino() {
@@ -120,7 +121,7 @@ public class Robot {
 
   /*
    * Método que devuelve el estado actual del robot.
-   * 
+   *
    * @return EstadoRobot estado en el que se encuentra el robot cuando se manda a
    * llamar el método.
    */
@@ -130,7 +131,7 @@ public class Robot {
 
   /*
    * Método que devuelve el valor del atributo proximidadDestino.
-   * 
+   *
    * @return int cercanía del robot hacia la mesa del cliente.
    */
   public int getProximidadDestino() {
@@ -139,7 +140,7 @@ public class Robot {
 
   /*
    * Método que modifica el valor del atributo proximidadDestino.
-   * 
+   *
    * @param proximidad qué tan cerca o lejos se encuentra el robot de la mesa del
    * cliente.
    */
@@ -149,7 +150,7 @@ public class Robot {
 
   /*
    * Método que modifica el valor del atributo llegarDestino.
-   * 
+   *
    * @param sn s representa si (en referencia a que ya se llegó al destino) y n
    * representa no
    * (en referencia a que no ha llegado a su destino).
@@ -161,7 +162,7 @@ public class Robot {
 
   /*
    * Método que modifica el valor del atributo ordenEntregada.
-   * 
+   *
    * @param sn s representa si (en referencia a que ya se entregó la orden) y n
    * representa no
    * (en referencia a que no se ha entregado la orden).
@@ -179,7 +180,7 @@ public class Robot {
 
   /*
    * Método que devuelve el estado suspendido del robot.
-   * 
+   *
    * @return EstadoRobot.
    */
   public EstadoRobot getSuspendido() {
@@ -188,7 +189,7 @@ public class Robot {
 
   /*
    * Método que devuelve el estado caminando del robot.
-   * 
+   *
    * @return EstadoRobot.
    */
   public EstadoRobot getCaminando() {
@@ -197,7 +198,7 @@ public class Robot {
 
   /*
    * Método que devuelve el estado atendiendo del robot.
-   * 
+   *
    * @return EstadoRobot.
    */
   public EstadoRobot getAtendiendo() {
@@ -206,7 +207,7 @@ public class Robot {
 
   /*
    * Método que devuelve el estado cocinando del robot.
-   * 
+   *
    * @return EstadoRobot.
    */
   public EstadoRobot getCocinando() {
@@ -243,7 +244,7 @@ public class Robot {
 
   /*
    * Método que modifica el estado actual del robot.
-   * 
+   *
    * @param nuevoEstado
    */
   public void asignarNuevoEstado(EstadoRobot nuevoEstado) {

@@ -1,3 +1,4 @@
+package Robot;
 import java.util.ArrayList;
 
 import Menus.Menu;
@@ -13,7 +14,7 @@ public class Suspendido implements EstadoRobot {
 
   /**
    * Constructor de la clase Suspendido.
-   * 
+   *
    * @param bender Robot que tendrá el estado suspendido.
    **/
   public Suspendido(Robot bender) {

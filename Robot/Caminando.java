@@ -1,3 +1,4 @@
+package Robot;
 import Menus.Menu;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -15,7 +16,7 @@ public class Caminando implements EstadoRobot {
 
   /**
    * Constructor de la clase Caminando
-   * 
+   *
    * @param bender Robot que tendrá el estado caminando.
    **/
   public Caminando(Robot bender) {

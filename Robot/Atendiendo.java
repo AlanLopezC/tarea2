@@ -1,9 +1,10 @@
+package Robot;
 import java.util.ArrayList;
 
 import Menus.Menu;
 
 /*
-Esta clase simula el estado atendiendo de un robot. 
+Esta clase simula el estado atendiendo de un robot.
 */
 public class Atendiendo implements EstadoRobot {
   /*
@@ -13,7 +14,7 @@ public class Atendiendo implements EstadoRobot {
 
   /**
    * Constructor de la clase Atendiendo
-   * 
+   *
    * @param bender Robot que tendrá el estado atendendiendo.
    **/
   public Atendiendo(Robot bender) {

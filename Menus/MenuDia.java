@@ -14,7 +14,7 @@ public class MenuDia extends Menu {
     private ArrayList<Hamburguesa> hamburguesas;
 
     /**
-     * 
+     *
      */
     public MenuDia() {
         super("DIA");
@@ -24,7 +24,7 @@ public class MenuDia extends Menu {
                 "Rica hamburguesa hecha con un hongo portobello.", 200, true, true));
         agregarHamburguesa(new HamburguesaVegana("2", "Vegana",
                 "Rica hamburguesa vegana", 250, false, true));
-        agregarHamburguesa(new HamburguesaVegetariana("3", "Portobello",
+        agregarHamburguesa(new HamburguesaVegetariana("3", "Vegetariana",
                 "Rica hamburguesa vegetariana.", 150, true, true));
     }
 
@@ -38,7 +38,7 @@ public class MenuDia extends Menu {
 
     /**
      * Método para elminar una Hamburguesa del Menu.
-     * 
+     *
      * @param String - Id de la Hamburguesa.
      */
     public Hamburguesa eliminarHamburguesa(String id) {
