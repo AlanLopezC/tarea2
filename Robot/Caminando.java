@@ -58,16 +58,18 @@ public class Caminando implements EstadoRobot {
       System.out.println("********************************");
     }
     System.out.println("Selecciona el numero de menu que deseas: ");
-    final Scanner sc = new Scanner(System.in);
+
 
     try {
-      String opcionUsuario = sc.nextLine();
+      Scanner scn = new Scanner(System.in);
+      String opcionUsuario = scn.nextLine();
+      System.out.println("llega");
       int menuSeleccionadoIndex = Integer.parseInt(opcionUsuario);
 
       Menu menuSeleccionado = menus.get(menuSeleccionadoIndex - 1);
-      menuSeleccionado.mostrarMenu();
+      System.out.println(menuSeleccionado.mostrarMenu());
 
-      String opcionUsuario2 = sc.nextLine();
+      String opcionUsuario2 = scn.nextLine();
       Hamburguesa hamburguesaSeleccionada = menuSeleccionado.obtenerHamburguesa(opcionUsuario2);
       bender.setHamburguesaSeleccionada(hamburguesaSeleccionada);
 
@@ -75,7 +77,7 @@ public class Caminando implements EstadoRobot {
       System.out.println(ex);
     }
 
-    sc.close();
+    scn.close();
   }
 
   /**

@@ -14,7 +14,7 @@ public class PruebaBender {
 		ArrayList<Menu> menus = new ArrayList<Menu>();
 		menus.add(new MenuDia());
 		menus.add(new MenuGeneral());
-		menus.add(new MenuEspecial());
+		//menus.add(new MenuEspecial());
 
 
 		int opcion;
