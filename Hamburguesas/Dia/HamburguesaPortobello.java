@@ -2,7 +2,7 @@ package Hamburguesas.Dia;
 
 public class HamburguesaPortobello extends HamburguesaDia {
 
-    HamburguesaPortobello(String id, String nombre, String descripcion, double precio, boolean tieneQueso,
+    public HamburguesaPortobello(String id, String nombre, String descripcion, double precio, boolean tieneQueso,
             boolean esVegetariano) {
         super(id, nombre, descripcion, precio, tieneQueso, esVegetariano);
     }
