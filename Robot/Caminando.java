@@ -1,3 +1,5 @@
+package Robot;
+
 import Menus.Menu;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -47,7 +49,7 @@ public class Caminando implements EstadoRobot {
       bender.resetProximidadDestino();
       bender.asignarNuevoEstado(bender.getAtendiendo());
 
-      // Aquí lo agrege 
+      // Aquí lo agrege
       bender.setOrdenRecibida();
 
       System.out.println("En esta parte ya cambio al estado atendido -------------");
@@ -57,34 +59,34 @@ public class Caminando implements EstadoRobot {
   }
 
   private void imprimirMenus(ArrayList<Menu> menus) {
-    while(true){
+    while (true) {
       try {
         for (Menu menu : menus) {
           System.out.println(menu.mostrarMenu());
           System.out.println("********************************");
         }
-    System.out.println("Selecciona el numero de menu que deseas: ");
-    final Scanner sc = new Scanner(System.in);
-      String opcionUsuario = sc.nextLine();
-      int menuSeleccionadoIndex = Integer.parseInt(opcionUsuario);
+        System.out.println("Selecciona el numero de menu que deseas: ");
+        final Scanner sc = new Scanner(System.in);
+        String opcionUsuario = sc.nextLine();
+        int menuSeleccionadoIndex = Integer.parseInt(opcionUsuario);
 
-      Menu menuSeleccionado = menus.get(menuSeleccionadoIndex - 1);
-      System.out.println(menuSeleccionado.mostrarMenu());
+        Menu menuSeleccionado = menus.get(menuSeleccionadoIndex - 1);
+        System.out.println(menuSeleccionado.mostrarMenu());
 
-      System.out.println("Introduzca el ID: ");
+        System.out.println("Introduzca el ID: ");
 
-      String opcionUsuario2 = sc.nextLine();
-      
-      Hamburguesa hamburguesaSeleccionada = menuSeleccionado.obtenerHamburguesa(opcionUsuario2);
-      if(hamburguesaSeleccionada == null){
-        continue;
+        String opcionUsuario2 = sc.nextLine();
+
+        Hamburguesa hamburguesaSeleccionada = menuSeleccionado.obtenerHamburguesa(opcionUsuario2);
+        if (hamburguesaSeleccionada == null) {
+          continue;
+        }
+        bender.setHamburguesaSeleccionada(hamburguesaSeleccionada);
+        break;
+
+      } catch (NumberFormatException ex) {
+        System.out.println("Vuelve a intentarlo.");
       }
-      bender.setHamburguesaSeleccionada(hamburguesaSeleccionada);
-      break;
-
-    } catch (NumberFormatException ex) {
-      System.out.println("Vuelve a intentarlo.");
-    }
     }
   }
 

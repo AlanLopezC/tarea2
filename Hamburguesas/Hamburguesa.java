@@ -26,6 +26,7 @@ public abstract class Hamburguesa {
      * Implementa el proceso de coccion de la hamburguesa.
      */
     public void procesoCoccion() {
+        System.out.println("*********************************************");
         ponerPan();
         ponerMayonesa();
         ponerMostaza();
@@ -37,6 +38,7 @@ public abstract class Hamburguesa {
         ponerVegetales();
         ponerCatsup();
         ponerPan();
+        System.out.println("*********************************************");
     }
 
     /**

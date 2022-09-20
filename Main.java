@@ -5,8 +5,9 @@ import Menus.Menu;
 import Menus.MenuDia;
 import Menus.MenuEspecial;
 import Menus.MenuGeneral;
+import Robot.Robot;
 
-public class PruebaBender {
+public class Main {
 	public static void main(String[] args) {
 		Robot bender = new Robot();
 		Scanner sc = new Scanner(System.in);
