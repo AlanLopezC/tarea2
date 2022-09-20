@@ -22,6 +22,11 @@ public class MenuDia extends Menu {
         hamburguesas.add(hamburguesa);
     }
 
+    /**
+     * Método para elminar una Hamburguesa del Menu.
+     * 
+     * @param String - Id de la Hamburguesa.
+     */
     public Hamburguesa eliminarHamburguesa(String id) {
 
         Iterator<Hamburguesa> hamburguesasIterador = hamburguesas.iterator();
@@ -37,25 +42,7 @@ public class MenuDia extends Menu {
 
     @Override
     public Iterator<Hamburguesa> iterator() {
-        return new Iterator<Hamburguesa>() {
-
-            private int position = 0;
-
-            @Override
-            public boolean hasNext() {
-                if (position >= hamburguesas.size()) {
-                    return false;
-                }
-                return true;
-            }
-
-            @Override
-            public Hamburguesa next() {
-                Hamburguesa hamburguesa = hamburguesas.get(position);
-                position += 1;
-                return hamburguesa;
-            }
-        };
+        return new MenuDiaIterator(hamburguesas);
     }
 
 }
